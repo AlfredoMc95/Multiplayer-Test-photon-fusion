@@ -457,6 +457,7 @@ Transform:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.36464608, y: -0, z: -0, w: 0.93114626}
   m_LocalPosition: {x: 0, y: 93.7, z: -134.4}
 =======
@@ -471,6 +472,10 @@ Transform:
   m_LocalRotation: {x: 0.36464608, y: -0, z: -0, w: 0.93114626}
   m_LocalPosition: {x: 0, y: 93.7, z: -134.4}
 >>>>>>> parent of 93f10a6 (fire a balll)
+=======
+  m_LocalRotation: {x: 0.2863791, y: -0, z: -0, w: 0.9581164}
+  m_LocalPosition: {x: 4.3, y: 77, z: -146.9}
+>>>>>>> parent of 8e1223b (3person camera, bug)
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
