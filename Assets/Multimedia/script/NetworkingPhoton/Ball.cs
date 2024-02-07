@@ -9,13 +9,11 @@ public class Ball : NetworkBehaviour
 
     public void Init()
     {
-        // timepo que vive el proyectil
         life = TickTimer.CreateFromSeconds(Runner, 5.0f);
     }
 
     public override void FixedUpdateNetwork()
     {
-        //verifica el tiempo de vida y lo "despawnea" pasado dicho tiempo
         if (life.Expired(Runner))
             Runner.Despawn(Object);
         else
