@@ -16,6 +16,7 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     private Dictionary<PlayerRef, NetworkObject> _spawnedCharacters = new Dictionary<PlayerRef, NetworkObject>();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private bool _mouseButton0;
     private bool _space;
 
@@ -25,6 +26,8 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
         _mouseButton0 = _mouseButton0 | Input.GetMouseButton(0);
         _space = _space | Input.GetKey(KeyCode.Space);
     }
+=======
+>>>>>>> parent of 93f10a6 (fire a balll)
 =======
 >>>>>>> parent of 93f10a6 (fire a balll)
 
@@ -64,12 +67,15 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
         if (Input.GetKey(KeyCode.D))
             data.direction += Vector3.right;
 <<<<<<< HEAD
+<<<<<<< HEAD
         //disparo
         data.buttons.Set(NetworkInputData.MOUSEBUTTON0, _mouseButton0);
         _mouseButton0 = false;
         //salto
         data.buttons.Set(NetworkInputData.SPACE, _space);
         _space = false;
+=======
+>>>>>>> parent of 93f10a6 (fire a balll)
 =======
 >>>>>>> parent of 93f10a6 (fire a balll)
 

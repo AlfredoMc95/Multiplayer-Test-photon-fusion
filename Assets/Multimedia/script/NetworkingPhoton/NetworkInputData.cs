@@ -4,6 +4,7 @@ using UnityEngine;
 public struct NetworkInputData : INetworkInput
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // comandos que resibe 
 
     public const byte MOUSEBUTTON0 = 1;
@@ -11,6 +12,8 @@ public struct NetworkInputData : INetworkInput
     public const byte SPACE = 1;
 
     public NetworkButtons buttons;
+=======
+>>>>>>> parent of 93f10a6 (fire a balll)
 =======
 >>>>>>> parent of 93f10a6 (fire a balll)
     public Vector3 direction;

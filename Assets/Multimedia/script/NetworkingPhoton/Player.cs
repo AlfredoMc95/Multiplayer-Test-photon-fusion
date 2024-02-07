@@ -18,6 +18,7 @@ public class Player : NetworkBehaviour
             //movimiento: revisar como mejorar y que sea con relacion a la camara
             _cc.Move(5 * data.direction * Runner.DeltaTime);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             if (data.direction.sqrMagnitude > 0)
                 _forward = data.direction;
@@ -63,6 +64,8 @@ public class Player : NetworkBehaviour
                 delay = TickTimer.CreateFromSeconds(Runner, 1f);
                 _cc.Jump();
             }
+=======
+>>>>>>> parent of 93f10a6 (fire a balll)
 =======
 >>>>>>> parent of 93f10a6 (fire a balll)
         }

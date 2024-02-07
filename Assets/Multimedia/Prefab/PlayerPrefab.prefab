@@ -525,9 +525,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   _prefabBall: {fileID: 326615523052137828, guid: adcd2d7c89d5b93439df19d5c6cd8504, type: 3}
 --- !u!1 &4313010225184307476
 =======
+=======
+>>>>>>> parent of 93f10a6 (fire a balll)
 --- !u!1 &8564456498625288541
 >>>>>>> parent of 93f10a6 (fire a balll)
 GameObject:
