@@ -1,20 +1,13 @@
 using Fusion;
-using UnityEngine;
 
 public class Player : NetworkBehaviour
 {
-    [SerializeField] private Ball _prefabBall;
-
-    [Networked] private TickTimer delay { get; set; }
-
     private NetworkCharacterController _cc;
-    private Vector3 _forward;
 
     private void Awake()
     {
         //referencia al character controller
         _cc = GetComponent<NetworkCharacterController>();
-        _forward = transform.forward;
     }
 
     public override void FixedUpdateNetwork()
@@ -24,6 +17,7 @@ public class Player : NetworkBehaviour
             data.direction.Normalize();
             //movimiento: revisar como mejorar y que sea con relacion a la camara
             _cc.Move(5 * data.direction * Runner.DeltaTime);
+<<<<<<< HEAD
 
             if (data.direction.sqrMagnitude > 0)
                 _forward = data.direction;
@@ -61,6 +55,8 @@ public class Player : NetworkBehaviour
                 delay = TickTimer.CreateFromSeconds(Runner, 1f);
                 _cc.Jump();
             }
+=======
+>>>>>>> parent of 93f10a6 (fire a balll)
         }
     }
 }
