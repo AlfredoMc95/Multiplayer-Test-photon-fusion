@@ -68,6 +68,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children:
   - {fileID: 8237879045128855901}
   m_Father: {fileID: 1061074014765603488}
@@ -144,6 +145,8 @@ Transform:
   - {fileID: 744584188676753205}
   m_Father: {fileID: 5763648776876515699}
 =======
+=======
+>>>>>>> parent of 8e1223b (3person camera, bug)
   m_Children: []
   m_Father: {fileID: 1530527973654156362}
 >>>>>>> parent of 8e1223b (3person camera, bug)
@@ -231,6 +234,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1 &3102682475007302277
@@ -905,6 +909,8 @@ MonoBehaviour:
 =======
 =======
 >>>>>>> parent of 8e1223b (3person camera, bug)
+=======
+>>>>>>> parent of 8e1223b (3person camera, bug)
 --- !u!1 &8114052514129346094
 >>>>>>> parent of 8e1223b (3person camera, bug)
 GameObject:
@@ -1190,10 +1196,13 @@ Transform:
   m_Children:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 6461489583640801206}
   - {fileID: 1493048434591286555}
   m_Father: {fileID: 5763648776876515699}
 =======
+=======
+>>>>>>> parent of 8e1223b (3person camera, bug)
 =======
 >>>>>>> parent of 8e1223b (3person camera, bug)
   - {fileID: 1623954641750307431}
@@ -1232,9 +1241,14 @@ Transform:
   m_ConstrainProportionsScale: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children:
   - {fileID: 1884462209982261467}
   m_Father: {fileID: 3092178248641109501}
+=======
+  m_Children: []
+  m_Father: {fileID: 1530527973654156362}
+>>>>>>> parent of 8e1223b (3person camera, bug)
 =======
   m_Children: []
   m_Father: {fileID: 1530527973654156362}
