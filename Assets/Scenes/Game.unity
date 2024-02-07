@@ -455,8 +455,13 @@ Transform:
   m_GameObject: {fileID: 1895879095}
   serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.36464608, y: -0, z: -0, w: 0.93114626}
   m_LocalPosition: {x: 0, y: 93.7, z: -134.4}
+=======
+  m_LocalRotation: {x: 0.2863791, y: -0, z: -0, w: 0.9581164}
+  m_LocalPosition: {x: 4.3, y: 77, z: -146.9}
+>>>>>>> parent of 8e1223b (3person camera, bug)
 =======
   m_LocalRotation: {x: 0.2863791, y: -0, z: -0, w: 0.9581164}
   m_LocalPosition: {x: 4.3, y: 77, z: -146.9}
