@@ -12,6 +12,7 @@ public class Player : NetworkBehaviour
 
     private void Awake()
     {
+        //referencia al character controller
         _cc = GetComponent<NetworkCharacterController>();
         _forward = transform.forward;
     }
@@ -21,15 +22,17 @@ public class Player : NetworkBehaviour
         if (GetInput(out NetworkInputData data))
         {
             data.direction.Normalize();
+            //movimiento: revisar como mejorar y que sea con relacion a la camara
             _cc.Move(5 * data.direction * Runner.DeltaTime);
 
             if (data.direction.sqrMagnitude > 0)
                 _forward = data.direction;
-
+            //dispara
             if (HasStateAuthority && delay.ExpiredOrNotRunning(Runner))
             {
                 if (data.buttons.IsSet(NetworkInputData.MOUSEBUTTON0))
                 {
+                    //cadencia de un segundo
                     delay = TickTimer.CreateFromSeconds(Runner, 1f);
                     Runner.Spawn(_prefabBall,
                     transform.position + _forward, Quaternion.LookRotation(_forward),
@@ -39,6 +42,12 @@ public class Player : NetworkBehaviour
                         o.GetComponent<Ball>().Init();
                     });
                 }
+            }
+            // salto con un delay tras 1 segundo
+            if (data.buttons.IsSet(NetworkInputData.SPACE))
+            {
+                delay = TickTimer.CreateFromSeconds(Runner, 1f);
+                _cc.Jump();
             }
         }
     }

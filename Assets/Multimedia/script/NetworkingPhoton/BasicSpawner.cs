@@ -11,22 +11,27 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
 {
     private NetworkRunner _runner;
 
+    //referencia del perosanaje
     [SerializeField] private NetworkPrefabRef _playerPrefab;
     private Dictionary<PlayerRef, NetworkObject> _spawnedCharacters = new Dictionary<PlayerRef, NetworkObject>();
 
     private bool _mouseButton0;
+    private bool _space;
 
     private void Update()
     {
+        // update sigo sin entender por que no usaron fixed en la documetnacion
         _mouseButton0 = _mouseButton0 | Input.GetMouseButton(0);
+        _space = _space | Input.GetKey(KeyCode.Space);
     }
 
     public void OnPlayerJoined(NetworkRunner runner, PlayerRef player) {
 
         if (runner.IsServer)
         {
-            // Create a unique position for the player
+            // spawn creat una posicion
             Vector3 spawnPosition = new Vector3((player.RawEncoded % runner.Config.Simulation.PlayerCount) * 3, 1, 0);
+            // instancia el peronaje en la posicion 
             NetworkObject networkPlayerObject = runner.Spawn(_playerPrefab, spawnPosition, Quaternion.identity, player);
             // Keep track of the player avatars for easy access
             _spawnedCharacters.Add(player, networkPlayerObject);
@@ -43,7 +48,7 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
     public void OnInput(NetworkRunner runner, NetworkInput input) {
 
         var data = new NetworkInputData();
-
+        //movimietno
         if (Input.GetKey(KeyCode.W))
             data.direction += Vector3.forward;
 
@@ -55,9 +60,12 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
 
         if (Input.GetKey(KeyCode.D))
             data.direction += Vector3.right;
-
+        //disparo
         data.buttons.Set(NetworkInputData.MOUSEBUTTON0, _mouseButton0);
         _mouseButton0 = false;
+        //salto
+        data.buttons.Set(NetworkInputData.SPACE, _space);
+        _space = false;
 
         input.Set(data);
     }
@@ -102,6 +110,8 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
             SceneManager = gameObject.AddComponent<NetworkSceneManagerDefault>()
         });
     }
+
+    //dibuja el boton host y join
     private void OnGUI()
     {
         if (_runner == null)
