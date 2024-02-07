@@ -32,8 +32,12 @@ public class Player : NetworkBehaviour
             {
                 if (data.buttons.IsSet(NetworkInputData.MOUSEBUTTON0))
                 {
+<<<<<<< HEAD
                     //cadencia de un segundo
                     delay = TickTimer.CreateFromSeconds(Runner, 1f);
+=======
+                    delay = TickTimer.CreateFromSeconds(Runner, 0.5f);
+>>>>>>> parent of 8e1223b (3person camera, bug)
                     Runner.Spawn(_prefabBall,
                     transform.position + _forward, Quaternion.LookRotation(_forward),
                     Object.InputAuthority, (runner, o) =>
