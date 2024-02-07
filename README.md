@@ -1,6 +1,6 @@
 # Prueba tecnica desarrollador Teriun AlfredoMartinez
 
-##Instalación
+## Instalación
 
 Clona el repositorio usando 
 
@@ -14,4 +14,5 @@ Clona el repositorio usando
 ## Tecnologias
 
 Unity 2022.3.11f1
+
 Photon Fusion
