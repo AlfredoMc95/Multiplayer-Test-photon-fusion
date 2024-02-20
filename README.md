@@ -1,4 +1,6 @@
-# Prueba tecnica desarrollador Teriun AlfredoMartinez
+# Multiplayer Test photon fusion
+
+Proyecto para praticar conocimientos de Photon Fusion y unity 3D Juego multigugador
 
 ## Instalación
 
